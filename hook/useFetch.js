@@ -14,20 +14,23 @@ const useFetch = (endpoint, query) => {
 
   console.log("Using API Key:", apiKey);
 
-  const options = {
-    method: "GET",
-    url: `https://jsearch.p.rapidapi.com/${endpoint}`,
-    headers: {
-      "X-RapidAPI-Key": apiKey,
-      "X-RapidAPI-Host": "jsearch.p.rapidapi.com"
-    },
-    params: { ...query },
-  };
-
   const fetchData = async () => {
     setIsLoading(true);
 
     try {
+      const options = {
+        method: "GET",
+        url: `https://jsearch.p.rapidapi.com/${endpoint}`,
+        headers: {
+          "X-RapidAPI-Key": apiKey,
+          "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+        },
+        params: {
+          ...query,
+          country: "eg",
+        },
+      };
+
       const response = await axios.request(options);
       console.log("API Response:", response.data);
       setData(response.data.data);
