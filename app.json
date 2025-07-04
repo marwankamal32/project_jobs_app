@@ -1,10 +1,11 @@
 {
   "expo": {
     "scheme": "acme",
-    "plugins": [
-      "expo-router"
-    ],
+    "plugins": ["expo-router"],
     "name": "React_Native_jobs",
-    "slug": "React_Native_jobs"
+    "slug": "React_Native_jobs",
+    "extra": {
+      "RAPIDAPI_KEY": "ecd17847d2msh6c5f09dc51404bep1e12a5jsnc69fa9949c23"
+    }
   }
 }
