@@ -18,10 +18,14 @@ const Home = () => {
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
           headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            <View style={{ marginLeft: 10 }}>
+              <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            </View>
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
+            <View style={{ marginRight: 10 }}>
+              <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
+            </View>
           ),
           headerTitle: "",
         }}
